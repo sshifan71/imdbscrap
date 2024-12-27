@@ -21,6 +21,8 @@ movies = driver.find_elements(By.XPATH, '/html/body/div[2]/main/div[2]/div[3]/se
 serial_number = 1
 
 print(f"Found {len(movies)} movies")
+for i, row in enumerate(movies, 1):
+    print(f"Row {i}: {row.text}") 
 
 for movie in movies:
     
