@@ -20,7 +20,10 @@ WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//*[@
 movies = driver.find_elements(By.XPATH, '/html/body/div[2]/main/div[2]/div[3]/section/section/div/section/section/div[2]/div/section/div[2]/div[2]/ul')
 serial_number = 1
 
+#the 3lines below is to confirm that my code is collecting all the movies in the list
 print(f"Found {len(movies)} movies")
+for i, row in enumerate(movies, 1):
+    print(f"Row {i}: {row.text}") 
 
 for movie in movies:
     
